@@ -1,4 +1,4 @@
-FROM armhf/alpine:latest
+FROM arm32v6/alpine:latest
 
 RUN apk update && apk add supervisor tor privoxy && mkdir -p /var/log/supervisor
 COPY torrc /etc/tor/torrc
