@@ -1,15 +1,16 @@
-# Docker-tor-privoxy
+# Docker-tor-privoxy-composed
 
-Privacy docker combining tor and privoxy with Alpine for arm. Both services are accessible
-
-## How to build the image
-
-```
-docker build tor-privoxy .
-```
+Docker compose with privoxy and tor running in two separate dockers. Privoxy depends on tor.
 
 ## How to run
 
 ```
-docker run -p8118:8118 -p 9050:9050 tor-privoxy
+cd ./docker-tor-privoxy
+docker-compose up -d
+```
+
+## How to stop
+
+```
+docker-compose down
 ```
